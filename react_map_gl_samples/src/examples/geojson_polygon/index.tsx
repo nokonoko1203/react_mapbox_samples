@@ -31,7 +31,7 @@ const initialState = {
   zoom: 5,
 };
 
-const sampleGeojson: any = {
+const sampleSource: any = {
   type: 'Feature',
   geometry: {
     type: 'Polygon',
@@ -62,17 +62,17 @@ const sampleGeojson: any = {
   },
 };
 
-const geojsonLayer = {
+const sampleLayer: any = {
   id: 'maine',
   type: 'fill',
-  source: sampleGeojson,
+  source: sampleSource,
   paint: {
     'fill-color': '#088',
     'fill-opacity': 0.8,
   },
 };
 
-const PolyTo3dBuilding = () => {
+const SampleMapView = () => {
   const [viewport, setViewport] = useState(initialState);
 
   // resizeイベント発火ごとに画面幅と高さを取得し、ステートを更新
@@ -97,12 +97,11 @@ const PolyTo3dBuilding = () => {
       <div style={{ position: 'absolute', right: 0 }}>
         <NavigationControl />
       </div>
-      <Source type="geojson" data={sampleGeojson}>
-        <Layer {...geojsonLayer} />
+      <Source type="geojson" data={sampleSource}>
+        <Layer {...sampleLayer} />
       </Source>
-      z
     </ReactMapGL>
   );
 };
 
-export default PolyTo3dBuilding;
+export default SampleMapView;
