@@ -1,5 +1,5 @@
 import React from 'react';
-import Map from './examples/basic_map/';
+import Map from './examples/geojson_point/';
 
 function App() {
   return (
