@@ -91,8 +91,6 @@ const Map = () => {
       map.addLayer(sampleLayer);
     });
 
-    map.addControl(new mapboxgl.NavigationControl(), 'top-right');
-
     return () => map.remove();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
