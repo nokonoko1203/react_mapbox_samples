@@ -1,5 +1,5 @@
 import React from 'react';
-import Map from './examples/geojson_polygon/';
+import Map from './examples/geojson_line/';
 
 function App() {
   return (
